@@ -1,0 +1,311 @@
+{
+	"info": {
+		"_postman_id": "e7d02dcf-b28c-40f1-b6e8-ec5b7250b713",
+		"name": "Comic-Book-Store",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "21391219"
+	},
+	"item": [
+		{
+			"name": "Create Comic",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"bookName\": \"Spider-Man: Homecoming\",\r\n    \"authorName\": \"Brian Michael Bendis\",\r\n    \"yearOfPublication\": 2017,\r\n    \"price\": 19.99,\r\n    \"discount\": 2.00,\r\n    \"numberOfPages\": 120,\r\n    \"condition\": \"new\",\r\n    \"description\": \"The story of Spider-Man's early days as a superhero.\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:5000/api/comic-books"
+			},
+			"response": [
+				{
+					"name": "Create Comic",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"bookName\": \"Spider-Man: Homecoming\",\r\n    \"authorName\": \"Brian Michael Bendis\",\r\n    \"yearOfPublication\": 2017,\r\n    \"price\": 19.99,\r\n    \"discount\": 2.00,\r\n    \"numberOfPages\": 120,\r\n    \"condition\": \"new\",\r\n    \"description\": \"The story of Spider-Man's early days as a superhero.\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/api/comic-books"
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "273"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"111-1v6sueM/u98IH1H6Q+sTDwrJDvM\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 17 Oct 2024 08:04:14 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"bookName\": \"Spider-Man: Homecoming\",\n    \"authorName\": \"Brian Michael Bendis\",\n    \"yearOfPublication\": 2017,\n    \"price\": 19.99,\n    \"discount\": 2,\n    \"numberOfPages\": 120,\n    \"condition\": \"new\",\n    \"description\": \"The story of Spider-Man's early days as a superhero.\",\n    \"_id\": \"6710c4fe8bfe452565eac6e9\",\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": " Fetch Inventory List",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:5000/api/comic-books"
+			},
+			"response": [
+				{
+					"name": "Fetch Inventory List",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:5000/api/comic-books"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "321"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"141-xXYwch/hgsHw5qk/oRzkqSWp12I\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 17 Oct 2024 08:04:30 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"comicBooks\": [\n        {\n            \"_id\": \"6710c4fe8bfe452565eac6e9\",\n            \"bookName\": \"Spider-Man: Homecoming\",\n            \"authorName\": \"Brian Michael Bendis\",\n            \"yearOfPublication\": 2017,\n            \"price\": 19.99,\n            \"discount\": 2,\n            \"numberOfPages\": 120,\n            \"condition\": \"new\",\n            \"description\": \"The story of Spider-Man's early days as a superhero.\",\n            \"__v\": 0\n        }\n    ],\n    \"totalPages\": 1,\n    \"currentPage\": 1\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Comic Book Details",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:5000/api/comic-books/6710c3258bfe452565eac6dd"
+			},
+			"response": [
+				{
+					"name": "Get Comic Book Details",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:5000/api/comic-books/6710c4fe8bfe452565eac6e9"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "273"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"111-T6eNZmQ6g0cIPtV3ik4sWGWzCoI\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 17 Oct 2024 08:05:02 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_id\": \"6710c4fe8bfe452565eac6e9\",\n    \"bookName\": \"Spider-Man: Homecoming\",\n    \"authorName\": \"Brian Michael Bendis\",\n    \"yearOfPublication\": 2017,\n    \"price\": 19.99,\n    \"discount\": 2,\n    \"numberOfPages\": 120,\n    \"condition\": \"new\",\n    \"description\": \"The story of Spider-Man's early days as a superhero.\",\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "Update Comic Book Details",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"bookName\": \"Spider-Man: Homecoming\",\r\n    \"authorName\": \"Brian Michael Bendis\",\r\n    \"yearOfPublication\": 2017,\r\n    \"price\": 17.99,\r\n    \"discount\": 1.00,\r\n    \"numberOfPages\": 120,\r\n    \"condition\": \"used\",\r\n    \"description\": \"The story of Spider-Man's early days as a superhero, now in used condition.\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:5000/api/comic-books/6710c3258bfe452565eac6dd"
+			},
+			"response": [
+				{
+					"name": "Update Comic Book Details",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"bookName\": \"Spider-Man: Homecoming\",\r\n    \"authorName\": \"Brian Michael Bendis\",\r\n    \"yearOfPublication\": 2017,\r\n    \"price\": 17.99,\r\n    \"discount\": 1.00,\r\n    \"numberOfPages\": 120,\r\n    \"condition\": \"used\",\r\n    \"description\": \"The story of Spider-Man's early days as a superhero, now in used condition.\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/api/comic-books/6710c4fe8bfe452565eac6e9"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "297"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"129-mB1ivrcpibuI+8SstfP5oT5e/0s\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 17 Oct 2024 08:05:25 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_id\": \"6710c4fe8bfe452565eac6e9\",\n    \"bookName\": \"Spider-Man: Homecoming\",\n    \"authorName\": \"Brian Michael Bendis\",\n    \"yearOfPublication\": 2017,\n    \"price\": 17.99,\n    \"discount\": 1,\n    \"numberOfPages\": 120,\n    \"condition\": \"used\",\n    \"description\": \"The story of Spider-Man's early days as a superhero, now in used condition.\",\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete Comic Book",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:5000/api/comic-books/6710c3258bfe452565eac6dd"
+			},
+			"response": [
+				{
+					"name": "Delete Comic Book",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:5000/api/comic-books/6710c4fe8bfe452565eac6e9"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "32"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"20-Dj7dUxjW1kOyQeu67EyMvLNtYgA\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 17 Oct 2024 08:05:44 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Comic book deleted\"\n}"
+				}
+			]
+		}
+	]
+}
